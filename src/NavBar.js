@@ -4,18 +4,11 @@ import './StyleNav.css'
 
 
 class Navbar extends Component {
-    state = {
-        login: false,
-    }
-    Logout = () => {
-       
-        this.setState({login:'false'});
-    }
     render() {
         const register = <li><a><Link to="/register">Register</Link></a></li>;
         const login = <li><a><Link to="/login">Login</Link></a></li>;
     
-        if (this.state.login) {
+        if (this.props.auth) {
             return (
                 <div id="listNav">
                     <ul>
@@ -31,7 +24,7 @@ class Navbar extends Component {
                 <div id="listNav">
                     <ul>
                         <li><a className="style"><Link to="/" >Home</Link></a></li>
-                        <li><a className="style" onClick={this.Logout}>Logout</a></li>
+                        <li><a className="style" onClick={this.props.logout}>Logout</a></li>
                     </ul>
                 </div>
             )

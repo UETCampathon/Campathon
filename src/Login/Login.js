@@ -19,8 +19,8 @@ class Login extends React.Component {
     handleSubmit = () =>{
         login({email:this.state.email,password:this.state.password}).then(res => {
             if(res.success){
-                   this.setState({redirect: true})
                    sessionStorage.setItem("accessToken",res.data.accessToken)
+                   this.props.login();
             }
             else this.setState({errorhandling: res.message})
         })
