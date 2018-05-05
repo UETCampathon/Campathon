@@ -12,7 +12,7 @@
 }
 #listNav ul {
     list-style-type: none;
-    background: black;
+    background: #a3a3a3;
 }
 
 #listNav ul li a{
@@ -25,6 +25,6 @@
 }
 #listNav ul li a:hover{
     color: #13edff;
-    background: #eeeeee;
+    background: #848484;
 
 }

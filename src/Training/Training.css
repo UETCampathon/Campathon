@@ -84,10 +84,12 @@ img {
 }
 
 .khoi1:active .front{
+
     transform: rotateY(180deg);
 
 }
 .khoi1:active .back{
+
     transform: rotateY(0deg);
 }
 .row .row3 {
