@@ -10,11 +10,10 @@ class App extends Component {
           <div>
               <nav className="navbar navbar-dark bg-inverse">
                   <div className="container">
-                      <Link to="/"><a className="navbar-brand" href="1.html">Home</a></Link>
+                      <Link to={"/"}>Home</Link>
                       <a className="navbar-brand" href="training.html">Training</a>
                       <a className="navbar-brand" href="#">Profile</a>
-                      <Link to="/login"><a className="navbar-brand" href="1.html">Login</a></Link>
-                      <Link to="/register"><a className="navbar-brand" href="1.html">Register</a></Link>
+                     
                   </div>
               </nav> 
               <div className="container mt-2">
