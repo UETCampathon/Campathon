@@ -18,9 +18,11 @@ class Register extends Component {
                 this.setState({ErrorHandling: "You've successfully created an account"})
                 setTimeout(()=>{
                     this.setState({Redirect: true})
+
                 } ,1000 )
             }
             else this.setState({ErrorHandling: res.message})
+
         });
 
     }
@@ -39,6 +41,7 @@ class Register extends Component {
     handleConfirmPasswordChange = (e) => {
         this.setState({ ConfirmPassword: e.target.value });
     }
+
     render() {
 
         return (
@@ -47,7 +50,7 @@ class Register extends Component {
                 
                 <div className="contentRegister">
                     <h1>Create your Account</h1>
-                    {this.state.ErrorHandling}
+                    <span className="messageRegis">{this.state.ErrorHandling}</span>
                     <form>
                         <div className="form-group">
 

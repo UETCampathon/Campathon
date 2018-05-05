@@ -6,10 +6,27 @@ html{
 body{
     height: 100%;
     width: 100%;
+    background: gray;
 }
 body.container{
     height: 100%;
     width: 100%;
+    background: white;
+    padding-top: 5%;
+    border-radius: 5%;
+
+}
+.progress-bar{
+    width: 60%;
+    margin-bottom: 2%;
+}
+.progress{
+    margin-bottom: 5%;
+}
+#wrap1{
+    background: white;
+    padding-top: 5%;
+    border-radius: 5%;
 }
 
 .row {
