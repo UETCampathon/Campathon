@@ -16,6 +16,7 @@
 }
 
 #listNav ul li a{
+    cursor: pointer;
     color: #f1f1f1;
     display: block;
     text-decoration: none;

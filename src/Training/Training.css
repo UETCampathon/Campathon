@@ -46,6 +46,7 @@ body.container{
 }
 
 .front {
+    cursor: pointer;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -68,6 +69,7 @@ img {
     left: 0;
 }
 .back {
+    cursor: pointer;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -81,10 +83,11 @@ img {
     backface-visibility: hidden;
 }
 
-.khoi1:hover .front{
+.khoi1:active .front{
     transform: rotateY(180deg);
+
 }
-.khoi1:hover .back{
+.khoi1:active .back{
     transform: rotateY(0deg);
 }
 .row .row3 {
