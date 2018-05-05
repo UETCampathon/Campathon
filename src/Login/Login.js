@@ -7,7 +7,7 @@ class Login extends React.Component {
         email: "" ,
         password: "",
         errorhandling: "",
-        redirect: false,
+      
     }
     handleEmailChange = (e) => {
         this.setState({email: e.target.value})
@@ -25,13 +25,12 @@ class Login extends React.Component {
             else this.setState({errorhandling: res.message})
         })
     }
-    redirect = () => {
-        return <Redirect to="/" />
-    }
+    
     render() {
+        if(this.props.auth) return <Redirect to="/"/>
         return (
             <div className="loginPage">
-                {(this.state.redirect) ? this.redirect() : null}
+                
                 <div className="contentLogin">
                     <h3>Log in to your Account</h3>
                     {this.state.errorhandling}

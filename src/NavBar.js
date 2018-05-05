@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import './StyleNav.css'
 
 
-class Navbar extends Component {
+class NavBar extends Component {
     render() {
         const register = <li><a><Link to="/register">Register</Link></a></li>;
         const login = <li><a><Link to="/login">Login</Link></a></li>;
     
-        if (this.props.auth) {
+        if (!this.props.auth) {
             return (
                 <div id="listNav">
                     <ul>
@@ -31,4 +31,4 @@ class Navbar extends Component {
         }
     }
 }
-export default Navbar;
+export default NavBar;
