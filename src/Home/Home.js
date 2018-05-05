@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import './App.css';
-=======
 import './Home.css';
 import {  Link } from 'react-router-dom';
->>>>>>> df0492aa36a7f34ca0c07f4b3a3a222ca51dad21
+
 
 class App extends Component {
   render() {
