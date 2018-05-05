@@ -3,7 +3,7 @@ import './Training.css';
 import {Link} from 'react-router-dom';
 import {Redirect} from "react-router-dom"
 import Image from "./Image"
-
+import {addToLibrary} from "../Service/Services"
 const Animals = ["Dog", "Fish", "Lions", "Rabbit", "Snake"];
 const Fruits = ["Apples", "Bananas", "Grapes", "Lemons", "Orange"];
 const Tools = ["Books", "Eraser", "Pencils", "Ruler", "Scissors"];
@@ -94,7 +94,12 @@ class Training extends Component {
         }
         return res;
     }
-
+    choose = (picked,answer) => {
+        if(picked === this.getName(answer.img)) 
+        {
+            addToLibrary(picked).then(res=>this.setState({progress: this.state.progress+20}) );
+        }
+    }
     render() {
 
         const obj = this.randomImg(window.location.pathname.slice(10));
@@ -104,27 +109,21 @@ class Training extends Component {
         return (
             <div className="contariner">
                 <div id="wrap1">
-
-
                     <div className="progress">
                         <div className="progress-bar">{this.state.progress}%</div>
                     </div>
                     <div className="row">
-                        <Image src={obj[0].img} name={this.getName(obj[0].img)}/>
-                        <Image src={obj[1].img} name={this.getName(obj[1].img)}/>
-                        <Image src={obj[2].img} name={this.getName(obj[2].img)}/>
-                        <Image src={obj[3].img} name={this.getName(obj[3].img)}/>
+                        <Image src={obj[0].img} name={this.getName(obj[0].img)} choose={this.choose} answer={answer}/>
+                        <Image src={obj[1].img} name={this.getName(obj[1].img)} choose={this.choose} answer={answer}/>
+                        <Image src={obj[2].img} name={this.getName(obj[2].img)} choose={this.choose} answer={answer}/>
+                        <Image src={obj[3].img} name={this.getName(obj[3].img)} choose={this.choose} answer={answer}/>
                     </div>
-                    {/* end row 3*/}
                     <div className="row3">
                         <div className="col-sm-6 push-sm-3">
                             <h3>{this.getName(answer.img)}</h3>
                         </div>
                     </div>
-                    {/* end row 23*/}
-
                 </div>
-
             </div>
 
         );
