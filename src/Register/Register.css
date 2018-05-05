@@ -1,12 +1,29 @@
 .RegisterPage {
-    width: 50%;
-    margin: 5% auto;
-    border: 1px solid #ebebeb;
-    box-shadow:1px 1px 1px 1px #d7d7d7;
+    width: 30%;
+    margin: 7% auto;
+    box-shadow:1px 4px 25px 1px #d7d7d7;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
+
 .RegisterPage .headerRegis h1{
     background-color: #c5c5c5;
     line-height: 1.6;
     text-align: center;
     border-bottom: 1px solid #d2d2d2;
 }
+
+.RegisterPage .contentRegister {
+    margin: 3% 5% 5% 5%;
+
+}
+
+.RegisterPage .contentRegister h1{
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.RegisterPage .contentRegister form .regisButton button{
+    width: 100%;
+}
+
