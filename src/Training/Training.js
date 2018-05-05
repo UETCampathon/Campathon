@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Training.css';
 import {Link} from 'react-router-dom';
+
 class Training extends Component {
     render() {
         console.log("some thing")
