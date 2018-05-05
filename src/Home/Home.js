@@ -9,15 +9,6 @@ class App extends Component {
     return (
       <div className="App">
           <div>
-              <nav className="navbar navbar-dark bg-inverse">
-                  <div className="container">
-                      <Link to={"/"}>Home</Link>
-                      <a className="navbar-brand" href="training.html">Training</a>
-                      <a className="navbar-brand" href="#">Profile</a>
-                      <Link to={"/login"}>Login</Link>
-                      <Link to={"/register"}>Register</Link>
-                  </div>
-              </nav> 
               <div className="container mt-2">
                   <div className="row">
                       <div className="col-sm-8">

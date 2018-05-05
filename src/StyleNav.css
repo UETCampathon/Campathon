@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#listNav ul li {
+    color: #f1f1f1;
+    display: inline-table;
+    width:150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+}
+#listNav ul {
+    list-style-type: none;
+    background: black;
+}
+
+#listNav ul li a{
+    color: #f1f1f1;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+}
+#listNav ul li a:hover{
+    color: #13edff;
+    background: #eeeeee;
+
+}
