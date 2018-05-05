@@ -1,0 +1,14 @@
+ .library {
+    width: 65%;
+    margin: 5% auto;
+    box-shadow: 2px 2px 2px 2px #c7cbcc;
+    padding-bottom: 3%;
+}
+
+.library .headerLibrary h1{
+    text-align: center;
+    border-bottom: 2px solid #ebebeb;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #60acff;
+}
