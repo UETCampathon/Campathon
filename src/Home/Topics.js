@@ -16,11 +16,7 @@ class Topics extends React.Component {
                 {(this.state.redirect) ? this.redirect() : null}
                 <div className="card">
 
-                    <img className="card-img-top img-fluid img_card" src="images/1.png" alt="Card  cap" />
-                    <div className="card-block">
-                        <h4 className="card-title" >Topic name</h4>
-                        <a href className="btn btn-primary chuyen">Button</a>
-                    </div>
+
                     <img className="card-img-top img-fluid img_card" src={this.props.src} alt="Card image cap" />
                     <div className="card-block" >
                         <h4 className="card-title" />
