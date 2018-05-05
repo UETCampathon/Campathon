@@ -45,7 +45,7 @@ export const getList = () => {
         return response.json()
     })
 }
-export const addTodo = (text) => {
+export const addToLibrary = (text) => {
     const token=sessionStorage['token']
     const url = 'https://uetcc-todo-app.herokuapp.com/todos';
     const request = new Request(url,{

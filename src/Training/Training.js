@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './Training.css';
-import { Link } from 'react-router-dom';
-import { Redirect } from "react-router-dom"
+import {Link} from 'react-router-dom';
+import {Redirect} from "react-router-dom"
 import Image from "./Image"
-
+import {addToLibrary} from "../Service/Services"
 const Animals = ["Dog", "Fish", "Lions", "Rabbit", "Snake"];
 const Fruits = ["Apples", "Bananas", "Grapes", "Lemons", "Orange"];
 const Tools = ["Books", "Eraser", "Pencils", "Ruler", "Scissors"];
@@ -24,8 +24,8 @@ class Training extends Component {
                 first = i;
                 count++;
             }
-            else if(count===2 && path[i]==='.'){
-                last=i;
+            else if (count === 2 && path[i] === '.') {
+                last = i;
                 count++;
             }
         }
@@ -45,8 +45,8 @@ class Training extends Component {
                 }
             }
             res = arr.map(index => {
-                return  {img: "images/Animals/" + Animals[index] + ".png"}
-             })
+                return {img: "images/Animals/" + Animals[index] + ".png"}
+            })
         }
         else if (topic === "Fruits") {
             let count = 0;
@@ -59,8 +59,8 @@ class Training extends Component {
                 }
             }
             res = arr.map(index => {
-                return  {img: "images/Fruits/" + Fruits[index] + ".png"}
-             })
+                return {img: "images/Fruits/" + Fruits[index] + ".png"}
+            })
         }
 
         else if (topic === "Tools") {
@@ -74,8 +74,8 @@ class Training extends Component {
                 }
             }
             res = arr.map(index => {
-                return  {img: "images/Tools/" + Tools[index] + ".png"}
-             })
+                return {img: "images/Tools/" + Tools[index] + ".png"}
+            })
         }
 
         else if (topic === "Transportations") {
@@ -89,43 +89,42 @@ class Training extends Component {
                 }
             }
             res = arr.map(index => {
-               return  {img: "images/Transportations/" + Transportations[index] + ".png"}
+                return {img: "images/Transportations/" + Transportations[index] + ".png"}
             })
         }
         return res;
     }
+    choose = (picked,answer) => {
+        if(picked === this.getName(answer.img)) 
+        {
+            addToLibrary(picked).then(res=>this.setState({progress: this.state.progress+20}) );
+        }
+    }
     render() {
-        
+
         const obj = this.randomImg(window.location.pathname.slice(10));
-        const answer = obj[Math.floor(Math.random() * 4) ] ;
+        const answer = obj[Math.floor(Math.random() * 4)];
         console.log(answer)
-        if (!this.props.auth) return <Redirect to="/login" />
+        if (!this.props.auth) return <Redirect to="/login"/>
         return (
             <div className="contariner">
-                <div className="row">
-                    <div className="col-sm-8 push-sm-2">
-                        <div id="wrap1">
-                            <div className="progress">
-                                <div className="progress-bar">{this.state.progress}%</div>
-                            </div>
-                            <div className="row">
-                                <Image src={obj[0].img} name={this.getName(obj[0].img)} />
-                                <Image src={obj[1].img} name={this.getName(obj[1].img)} />
-                                <Image src={obj[2].img} name={this.getName(obj[2].img)} />
-                                <Image src={obj[3].img} name={this.getName(obj[3].img)} />
-                            </div>
-                            {/* end row 3*/}
-                            <div className="row3">
-                                <div className="col-sm-6 push-sm-3">
-                                    <h3>{this.getName(answer.img)}</h3>
-                                </div>
-                            </div>
-                            {/* end row 23*/}
+                <div id="wrap1">
+                    <div className="progress">
+                        <div className="progress-bar">{this.state.progress}%</div>
+                    </div>
+                    <div className="row">
+                        <Image src={obj[0].img} name={this.getName(obj[0].img)} choose={this.choose} answer={answer}/>
+                        <Image src={obj[1].img} name={this.getName(obj[1].img)} choose={this.choose} answer={answer}/>
+                        <Image src={obj[2].img} name={this.getName(obj[2].img)} choose={this.choose} answer={answer}/>
+                        <Image src={obj[3].img} name={this.getName(obj[3].img)} choose={this.choose} answer={answer}/>
+                    </div>
+                    <div className="row3">
+                        <div className="col-sm-6 push-sm-3">
+                            <h3>{this.getName(answer.img)}</h3>
                         </div>
                     </div>
                 </div>
             </div>
-
 
         );
     }
