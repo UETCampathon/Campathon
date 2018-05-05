@@ -10,7 +10,6 @@ import listReactFiles from 'list-react-files'
 import Library from "./Library/Library";
 
 
-
 class App extends React.Component {
     state = {
         login: false,
@@ -22,13 +21,10 @@ class App extends React.Component {
         this.setState({login: true})
     }
     logout = () => {
-        console.log("logout");
         sessionStorage.removeItem("accessToken");
         this.setState({login: false});
     }
     render() {
-        console.log("login", this.state.login)
-        console.log("session")
         return (
             <BrowserRouter>
                 <div>

@@ -5,10 +5,10 @@ class ListTopic extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <Topics src={"images/1.png"} topic={"1"}/>
-                    <Topics src={"images/2.png"} topic={"2"}/>
-                    <Topics src={"images/1.png"} topic={"3"}/>
-                    <Topics src={"images/2.png"} topic={"4"}/>
+                    <Topics src={"images/1.png"} topic={"Animals"}/>
+                    <Topics src={"images/2.png"} topic={"Fruits"}/>
+                    <Topics src={"images/1.png"} topic={"Tools"}/>
+                    <Topics src={"images/2.png"} topic={"Transportations"}/>
                 </div>
             </div>
 

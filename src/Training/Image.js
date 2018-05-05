@@ -6,9 +6,9 @@ class Image extends React.Component {
             <div className="col-sm-3 col-md-3 col-sx-10 push-sm-2 khoi1">
                 <div className="trang" />
                 <div className="front">
-                    <img src="images/hardware.jpg" />
+                    <img src={this.props.src} />
                 </div>
-                <div className="back">phần cứng</div>
+                <div className="back">{this.props.name}</div>
             </div>
         )
     }
