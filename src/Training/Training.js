@@ -118,27 +118,23 @@ class Training extends Component {
         if (!this.props.auth) return <Redirect to="/login" />
         return (
             <div className="contariner">
-                <div className="row">
-                    <div className="col-sm-8 push-sm-2">
-                        <div id="wrap1">
-                            <div className="progress">
-                                <div className="progress-bar">60%</div>
-                            </div>
-                            <div className="row">
-                                <Image src={this.state.img1} name={this.getName(this.state.img1)} />
-                                <Image src={this.state.img2} name={this.getName(this.state.img2)} />
-                                <Image src={this.state.img3} name={this.getName(this.state.img3)} />
-                                <Image src={this.state.img4} name={this.getName(this.state.img4)} />
-                            </div>
-                            {/* end row 3*/}
-                            <div className="row3">
-                                <div className="col-sm-6 push-sm-3">
-                                    <h3>Tu tieng anh</h3>
-                                </div>
-                            </div>
-                            {/* end row 23*/}
+                <div id="wrap1">
+                    <div className="progress">
+                        <div className="progress-bar">60%</div>
+                    </div>
+                    <div className="row">
+                        <Image src={this.state.img1} name={this.getName(this.state.img1)} />
+                        <Image src={this.state.img2} name={this.getName(this.state.img2)} />
+                        <Image src={this.state.img3} name={this.getName(this.state.img3)} />
+                        <Image src={this.state.img4} name={this.getName(this.state.img4)} />
+                    </div>
+                    {/* end row 3*/}
+                    <div className="row3">
+                        <div className="col-sm-6 push-sm-3">
+                            <h3>Tu tieng anh</h3>
                         </div>
                     </div>
+                    {/* end row 23*/}
                 </div>
             </div>
 
