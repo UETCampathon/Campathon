@@ -18,7 +18,6 @@ export const register = ({email,password,name}) => {
         return res.json()
     })
 }
-
 export const login = ({email,password}) => {
     const url= "https://uetcc-todo-app.herokuapp.com/login";
     const request = new Request(url,{
@@ -46,7 +45,7 @@ export const getList = () => {
         return response.json()
     })
 }
-export const addTodo = (text) => {
+export const addToLibrary = (text) => {
     const token=sessionStorage['token']
     const url = 'https://uetcc-todo-app.herokuapp.com/todos';
     const request = new Request(url,{
