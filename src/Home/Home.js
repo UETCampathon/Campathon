@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import './App.css';
+import './Home.css';
+import {  Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
+      console.log("some thing")
     return (
       <div className="App">
           <div>
               <nav className="navbar navbar-dark bg-inverse">
                   <div className="container">
-                      <a className="navbar-brand" href="1.html">Home</a>
+                      <Link to="/"><a className="navbar-brand" href="1.html">Home</a></Link>
                       <a className="navbar-brand" href="training.html">Training</a>
-                      <a className="navbar-brand" href="create.html">Create</a>
+                      <a className="navbar-brand" href="#">Profile</a>
+                      <Link to="/login"><a className="navbar-brand" href="1.html">Login</a></Link>
+                      <Link to="/register"><a className="navbar-brand" href="1.html">Register</a></Link>
                   </div>
-              </nav> {/* end menu */}
+              </nav> 
               <div className="container mt-2">
                   <div className="row">
                       <div className="col-sm-8">
@@ -44,20 +47,9 @@ class App extends Component {
                               </a>
                           </div>
                       </div> {/* end carousel */}
-                      <div className="col-sm-4 text-justify text-warning">
-                          <h3>Well come my app . You can Click the button below to view instruction ! thank you :))</h3>
-                          <button type="button" className="btn btn-primary mt-2 text-justify">Flashxu</button>
-                      </div>
+                    
                   </div>
               </div> {/* end first container */}
-              <div className="container">
-                  <div className="row">
-                      <div className="col-sm-12">
-                          <hr />
-                          <div className="alert alert-info text-xs-center">anh em mình là cái gì đây anh em mình là củ khoai tây ! ahihi</div>
-                      </div>
-                  </div>
-              </div> {/* end secon container */}
               <div className="container">
                   <div className="row">
                       <div className="col-sm-3">
