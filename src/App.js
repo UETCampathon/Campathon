@@ -7,6 +7,7 @@ import {Route, Switch } from 'react-router-dom';
 import Home from "./Home/Home"
 import Navbar from "./NavBar";
 import Training from "./Training/Training";
+import {getAuth} from "./StorageServices";
 
 const Animals = [
     "images/Animals/Dog.png","images/Animals/Fish.png","images/Animals/Lions.png","images/Animals/Rabbit.png","images/Animals/Snake.png"
@@ -33,7 +34,7 @@ class App extends React.Component {
         auth: false
     };
     componentDidMount(){
-        const auth = this.state;
+        const auth = getAuth();
 
         this.setState({
             auth: auth

@@ -29,6 +29,12 @@ class Login extends React.Component {
         return <Redirect to="/" />
     }
     render() {
+        const {auth} = this.props;
+
+        if (auth) {
+            return <Redirect to="/"/>;
+        }
+
         return (
             <div className="loginPage">
                 {(this.state.redirect) ? this.redirect() : null}

@@ -3,9 +3,16 @@ import React, { Component } from 'react';
 import './Home.css';
 import Training from "./Training"
 import DashBoard from "./DashBoard"
-class App extends Component {
+import {Redirect} from "react-router-dom"
+
+class Home extends Component {
     render() {
-       
+        const {auth} = this.props;
+
+        if(!auth){
+            return <Redirect to="/Login"/>
+        }
+
         return (
             <div className="App">
                 <div>
@@ -16,5 +23,5 @@ class App extends Component {
         );
     }
 }
-export default App;
+export default Home;
 
