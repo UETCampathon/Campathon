@@ -1,10 +1,11 @@
+
 import React, { Component } from 'react';
 import './Home.css';
 import {Redirect} from "react-router-dom"
 import DashBoard from "./DashBoard"
 import ListTopic from './ListTopic';
 
-class App extends Component {
+class Home extends Component {
     render() {
         
         if(!sessionStorage['accessToken']){
@@ -20,4 +21,4 @@ class App extends Component {
         );
     }
 }
-export default App;
+export default Home;

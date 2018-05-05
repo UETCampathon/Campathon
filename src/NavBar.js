@@ -1,6 +1,9 @@
-import React, { Component } from "react";
+
+import React, {Component} from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import './StyleNav.css'
+
 
 
 class Navbar extends Component {
@@ -36,6 +39,10 @@ class Navbar extends Component {
                 </div>
             )
         }
+
     }
+
+
 }
+
 export default Navbar;
