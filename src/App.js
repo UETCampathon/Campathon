@@ -2,15 +2,18 @@
 import React from "react"
 import Login from './Login/Login'
 import Register from "./Register/Register"
-
 import { Route, Switch } from 'react-router-dom';
 import Home from "./Home/Home"
 import Navbar from "./NavBar";
 import Training from "./Training/Training"
+import listReactFiles from 'list-react-files'
+ 
 
 
 class App extends React.Component {
+   
     render() {
+        
         return (
             <div>
                 <Navbar />
@@ -18,7 +21,7 @@ class App extends React.Component {
                     <Route exact path='/' component={Home} />
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/register' component={Register} />
-                    <Route exact path='/training' component={Training} />
+                    <Route exact path='/training/:id' component={Training} />
                 </Switch>
             </div>
         )
