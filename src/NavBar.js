@@ -14,7 +14,8 @@ class Navbar extends Component {
     render() {
         const register = <li><a><Link to="/register">Register</Link></a></li>;
         const login = <li><a><Link to="/login">Login</Link></a></li>;
-        if () {
+    
+        if (this.state.login) {
             return (
                 <div id="listNav">
                     <ul>
