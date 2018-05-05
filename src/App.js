@@ -5,18 +5,23 @@ import Register from "./Register/Register"
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "./Home/Home"
+import Navbar from "./NavBar";
+import Training from "./Training/Training"
 
 
 class App extends React.Component {
     render() {
         return (
-            <BrowserRouter>
+            <div>
+                <Navbar/>
+
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/register' component={Register} />
+                    <Route exact path='/training' component={Training} />
                 </Switch>
-            </BrowserRouter>
+            </div>
         )
     }
 }
