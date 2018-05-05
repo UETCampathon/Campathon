@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import {Redirect} from "react-router-dom"
 class Training extends Component {
     render() {
-    
+        if(!this.props.auth) return <Redirect to="/login" />
         return (
             <div className="contariner">
                 <div className="row">

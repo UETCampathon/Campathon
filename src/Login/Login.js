@@ -30,7 +30,6 @@ class Login extends React.Component {
         if(this.props.auth) return <Redirect to="/"/>
         return (
             <div className="loginPage">
-                
                 <div className="contentLogin">
                     <h3>Log in to your Account</h3>
                     {this.state.errorhandling}

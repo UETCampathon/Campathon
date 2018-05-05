@@ -8,8 +8,8 @@ class DashBoard extends React.Component{
                           <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
                               <ol className="carousel-indicators">
                                   <li data-target="#carousel-example-generic" data-slide-to={0} className="active" />
-                                  <li data-target="#carousel-example-generic" data-slide-to={0} />
-                                  <li data-target="#carousel-example-generic" data-slide-to={0} />
+                                  <li data-target="#carousel-example-generic" data-slide-to={1} />
+                                  <li data-target="#carousel-example-generic" data-slide-to={2} />
                               </ol>
                               <div className="carousel-inner" role="listbox">
                                   <div className="carousel-item active">
