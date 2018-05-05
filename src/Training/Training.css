@@ -1,4 +1,17 @@
 *{margin: 0; padding: 0;}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+body.container{
+    height: 100%;
+    width: 100%;
+}
+
 .row {
     height: 200px;
     margin-top: 2%;
@@ -12,6 +25,7 @@
     box-shadow: 0 0 0 9px black;
     border-radius: 4px;
     box-sizing: border-box;
+    perspective: 800px;
 }
 
 .front {
@@ -20,7 +34,6 @@
     height: 100%;
     left: 0;
     transition: 0.5s;
-
     backface-visibility: hidden;
 
 }
@@ -28,6 +41,7 @@
 img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .trang {
     width: 100%;
@@ -59,5 +73,5 @@ img {
 .row .row3 {
     text-align: center;
     height: 20%;
-    margin-top: 10%;
+    margin-top: 5%;
 }

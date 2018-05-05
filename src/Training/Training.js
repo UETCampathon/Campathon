@@ -8,45 +8,48 @@ class Training extends Component {
         return (
             <div className="contariner">
                 <div className="row">
-                    <div className="col-sm-6 push-sm-3">
+                    <div className="col-sm-8 push-sm-2">
                         <div className="container">
                             <div className="row">
-                                <div className="col-sm-4 push-sm-1 khoi1">
+                                <div className="col-sm-3 col-md-3 col-sx-10 push-sm-2 khoi1">
+                                    <div className="trang"/>
                                     <div className="front">
-                                        <img src="images/fruis.jpg"/>
+                                        <img src="images/hardware.jpg"/>
                                     </div>
                                     <div className="back">phần cứng</div>
                                 </div>
-                                <div className="col-sm-4 push-sm-2 khoi1">
-                                    <div className="back">phần cứng</div>
+                                <div className="col-sm-3 col-md-3 col-sx-10 push-sm-3 khoi1">
+                                    <div className="trang"/>
                                     <div className="front">
                                         <img src="images/flashcard.png"/>
                                     </div>
+                                    <div className="back">phần cứng</div>
                                 </div>
                             </div>
                             {/* end row 1 */}
                             <div className="row row2">
-                                <div className="col-sm-4 push-sm-1 khoi1">
+                                <div className="col-sm-3 col-md-3 col-sx-10 push-sm-2 khoi1">
+                                    <div className="trang"/>
                                     <div className="front">
                                         <img src="images/fruis.jpg"/>
                                     </div>
                                     <div className="back">phần cứng</div>
                                 </div>
-                                <div className="col-sm-4 push-sm-2 khoi1">
+                                <div className="col-sm-3 col-md-3 col-sx-10 push-sm-3 khoi1">
+                                    <div className="trang"/>
                                     <div className="front">
                                         <img src="images/hardware.jpg"/>
                                     </div>
                                     <div className="back">phần cứng</div>
                                 </div>
                             </div>
-                            {/* end row 2 */}
-                            <div className="row row3">
-                                .
-                                <div className="col-sm-11">
-                                    <p>Từ tiếng anh</p>
+                            {/* end row 3*/}
+                            <div className="row3">
+                                <div className="col-sm-5 push-sm-3">
+                                    <h3>Tu tieng anh</h3>
                                 </div>
                             </div>
-                            {/* end row 2 */}
+                            {/* end row 23*/}
                         </div>
                     </div>
                 </div>
