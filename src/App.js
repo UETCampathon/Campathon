@@ -2,12 +2,11 @@
 import React from "react"
 import Login from './Login/Login'
 import Register from "./Register/Register"
-
 import {Route, Switch } from 'react-router-dom';
 import Home from "./Home/Home"
 import Navbar from "./NavBar";
 import Training from "./Training/Training";
-import {getAuth} from "./StorageServices";
+
 
 const Animals = [
     "images/Animals/Dog.png","images/Animals/Fish.png","images/Animals/Lions.png","images/Animals/Rabbit.png","images/Animals/Snake.png"
@@ -27,40 +26,23 @@ const Transportations = [
 ];
 
 
-
 class App extends React.Component {
-
-    state = {
-        auth: false
-    };
-    componentDidMount(){
-        const auth = getAuth();
-
-        this.setState({
-            auth: auth
-        });
-    }
+   
     render() {
-        const {auth}=this.state;
+        
         return (
             <div>
-                <Navbar onAuth={this._onChangeAuth.bind(this)} auth={auth}/>
-
+                <Navbar />
                 <Switch>
-                    <Route exact path='/' component={() => <Home auth={auth}/>} />
-                    <Route exact path='/login' component={() => <Login onAuth={this._onChangeAuth.bind(this)} auth={auth}/>} />
-                    <Route exact path='/register' component={() => <Register auth={auth}/>} />
-                    <Route exact path='/training' component={() => <Training auth={auth}/>} />
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/login' component={Login} />
+                    <Route exact path='/register' component={Register} />
+                    <Route exact path='/training/:id' component={Training} />
                 </Switch>
             </div>
         )
     }
 
-    _onChangeAuth(auth) {
-        this.setState({
-            auth: auth
-        });
-    }
 
 }
 
