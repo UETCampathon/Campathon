@@ -7,8 +7,8 @@ class NavBar extends React.Component{
             <nav className="navbar navbar-dark bg-inverse">
                 <div className="container">
                     <Link to={"/"}>Home</Link>
-                    <a className="navbar-brand" href="training.html">Training</a>
-                    <a className="navbar-brand" href="#">Profile</a>
+                    <a className="navbar-brand" href="">Training</a>
+                    <a className="navbar-brand" href="">Profile</a>
                     <Link to={"/login"}>Login</Link>
                     <Link to={"/register"}>Register</Link>
                 </div>
