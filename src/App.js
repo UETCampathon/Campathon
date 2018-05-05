@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Register from "./Components/Register/Register";
 class App extends Component {
   render() {
     return (
@@ -12,7 +12,6 @@ class App extends Component {
                   <a className="navbar-brand" href="create.html">Create</a>
               </div>
           </nav> {/* end menu */}
-
       </div>
     );
   }
