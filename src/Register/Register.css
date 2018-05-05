@@ -1,0 +1,12 @@
+.RegisterPage {
+    width: 50%;
+    margin: 5% auto;
+    border: 1px solid #ebebeb;
+    box-shadow:1px 1px 1px 1px #d7d7d7;
+}
+.RegisterPage .headerRegis h1{
+    background-color: #c5c5c5;
+    line-height: 1.6;
+    text-align: center;
+    border-bottom: 1px solid #d2d2d2;
+}
