@@ -8,13 +8,13 @@ class Navbar extends Component {
         login: false,
     }
     Logout = () => {
-        sessionStorage.removeItem('accessToken')
+       
         this.setState({login:'false'});
     }
     render() {
         const register = <li><a><Link to="/register">Register</Link></a></li>;
         const login = <li><a><Link to="/login">Login</Link></a></li>;
-        if (!sessionStorage['accessToken']) {
+        if () {
             return (
                 <div id="listNav">
                     <ul>

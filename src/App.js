@@ -11,14 +11,19 @@ import listReactFiles from 'list-react-files'
 
 
 class App extends React.Component {
-   
+    state = {
+        login: false,
+    }
+    componentDidMount = () => {
+        this.setState({login: !!(sessionStorage['accesstoken'])})
+    }
     render() {
         
         return (
             <div>
                 <Navbar />
                 <Switch>
-                    <Route exact path='/' component={Home} />
+                    <Route exact path='/' component={() => {Home} } />
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/register' component={Register} />
                     <Route exact path='/training/:id' component={Training} />
