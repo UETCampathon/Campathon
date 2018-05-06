@@ -100,6 +100,7 @@ class Training extends Component {
                 const data = res.data.map((obj) => obj.title);
                 if(data.indexOf(picked)===-1)addToLibrary(picked)
                 this.setState({ progress: this.state.progress + 20 });
+                
             })
         }
     }
@@ -112,7 +113,7 @@ class Training extends Component {
             <div className="contariner">
                 <div id="wrap1">
                     <div className="progress">
-                        <div className="progress-bar">{this.state.progress}%</div>
+                        <div className="progress-bar" style={{width: this.state.progress+"%"}}>{this.state.progress}%</div>
                     </div>
                     <div className="row">
                         <Image src={obj[0].img} name={this.getName(obj[0].img)} choose={this.choose} answer={answer} />
