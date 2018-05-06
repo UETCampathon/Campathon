@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Training.css';
-import { Link } from 'react-router-dom';
 import { Redirect } from "react-router-dom"
 import Image from "./Image"
 import { addToLibrary, getList } from "../Service/Services"
@@ -12,6 +11,7 @@ const Transportations = ["Airplane", "Bike", "Boat", "Car", "Metro"];
 class Training extends Component {
     state = {
         progress: 0,
+        redirect: false,
     }
     getName = (path) => {
         let first = 0;
@@ -99,20 +99,20 @@ class Training extends Component {
             getList().then(res => {
                 const data = res.data.map((obj) => obj.title);
                 if(data.indexOf(picked)===-1)addToLibrary(picked)
-                this.setState({ progress: this.state.progress + 20 });
-                
+                if(this.state.progress !== 100) this.setState({ progress: this.state.progress + 20 });
+                if(this.state.progress === 100) setTimeout(()=> {this.setState({redirect: true})},5000)
             })
         }
     }
     render() {
-
+        
         const obj = this.randomImg(window.location.pathname.slice(10));
         const answer = obj[Math.floor(Math.random() * 4)];
         if (!this.props.auth) return <Redirect to="/login" />
         return (
             <div className="contariner">
-
-                <div className="pyro">
+                {(this.state.redirect) ? <Redirect to="/" /> : null}
+                <div className="pyro" style={(this.state.progress===100) ? {} : {display:"none"}}>
                     <div className="before"></div>
                     <div className="after"></div>
                 </div>

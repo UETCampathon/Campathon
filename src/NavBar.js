@@ -9,8 +9,8 @@ class NavBar extends Component {
             return (
                 <div id="listNav">
                     <ul>
-                        <li><a><Link to="/login">Login</Link></a></li>
-                        <li><a><Link to="/register">Register</Link></a></li>
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/register">Register</Link></li>
                     </ul>
                 </div>
             );
@@ -19,9 +19,9 @@ class NavBar extends Component {
             return (
                 <div id="listNav">
                     <ul>
-                        <li className="Home"><a className="style"><Link to="/" >Home</Link></a></li>
-                        <li><a className="style"><Link to="/library" >Library</Link></a></li>
-                        <li className="Logout"><a className="style" onClick={this.props.logout}>Logout</a></li>
+                        <li className="Home style"><Link to="/" >Home</Link></li>
+                        <li className="style"><Link to="/library" >Library</Link></li>
+                        <li className="Logout style" onClick={this.props.logout}>Logout</li>
                     </ul>
                 </div>
             )

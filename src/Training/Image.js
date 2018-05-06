@@ -10,7 +10,7 @@ class Image extends React.Component {
                 <div className="khoi1" onClick={this.choose}>
                     <div className="trang" />
                     <div className="front">
-                        <img src={this.props.src} />
+                        <img src={this.props.src} alt="Unable To Load"/>
                     </div>
                     <div className="back">{this.props.name}</div>
                 </div>

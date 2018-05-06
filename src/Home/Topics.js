@@ -15,10 +15,9 @@ class Topics extends React.Component {
             <div className="col-sm-3 col-xs-6">
                 {(this.state.redirect) ? this.redirect() : null}
                 <div className="card">
-                    <img className="card-img-top img-fluid img_card" src={this.props.src} alt="Card image cap" />
+                    <img className="card-img-top img-fluid img_card" src={this.props.src} alt="Card cap" />
                     <div className="card-block" >
-                        <h4 className="card-title" />
-                        <a href className="btn btn-primary chuyen" onClick={this.change}>Button</a>
+                        <a href="def" className="btn btn-primary chuyen" onClick={this.change}>Button</a>
                     </div>
                 </div>
             </div>
