@@ -17,7 +17,7 @@ class Topics extends React.Component {
                 <div className="card">
                     <img className="card-img-top img-fluid img_card" src={this.props.src} alt="Card cap" />
                     <div className="card-block" >
-                        <a href="def" className="btn btn-primary chuyen" onClick={this.change}>Button</a>
+                        <a  className="btn btn-primary chuyen" onClick={this.change}>Button</a>
                     </div>
                 </div>
             </div>
