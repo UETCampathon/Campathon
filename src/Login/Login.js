@@ -39,7 +39,7 @@ class Login extends React.Component {
                             <div className="form-group">
                                 <label htmlFor="inputEmail">Email address</label>
                                 <input type="email" className="form-control" id="FormControlFullName"
-                                       placeholder="Full Name"
+                                       placeholder="Your Email"
                                        onChange={this.handleEmailChange}/>
                             </div>
 
