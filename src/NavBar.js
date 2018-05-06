@@ -19,9 +19,9 @@ class NavBar extends Component {
             return (
                 <div id="listNav">
                     <ul>
-                        <li><a className="style"><Link to="/" >Home</Link></a></li>
+                        <li className="Home"><a className="style"><Link to="/" >Home</Link></a></li>
                         <li><a className="style"><Link to="/library" >Library</Link></a></li>
-                        <li><a className="style" onClick={this.props.logout}>Logout</a></li>
+                        <li className="Logout"><a className="style" onClick={this.props.logout}>Logout</a></li>
                     </ul>
                 </div>
             )
