@@ -6,13 +6,13 @@
     color: #f1f1f1;
     display: inline-table;
     width:150px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 24px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 25px;
 }
 #listNav ul {
     list-style-type: none;
-    background: #983ca3;
+    background: rgba(35, 6, 163, 0.95);
 }
 
 #listNav ul li a{
@@ -22,9 +22,16 @@
     text-decoration: none;
     text-align: center;
     border: none;
+    margin-bottom: 0;
 }
-#listNav ul li a:hover{
-    color: #63ff72;
-    background: #5b8bee;
 
+#listNav ul li a:hover{
+    color: red ;
+    background: #3e66ff;
 }
+
+
+.Logout{
+    float: right;
+}
+
