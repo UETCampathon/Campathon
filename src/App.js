@@ -6,7 +6,6 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Home from "./Home/Home"
 import NavBar from "./NavBar";
 import Training from "./Training/Training"
-import listReactFiles from 'list-react-files'
 import Library from "./Library/Library";
 import {getList} from "./Service/Services"
 
