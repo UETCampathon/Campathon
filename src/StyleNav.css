@@ -31,4 +31,7 @@
 .Logout{
     float: right;
 }
+.Logout:hover{
+    cursor: pointer;
+}
 
