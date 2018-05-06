@@ -110,6 +110,11 @@ class Training extends Component {
         if (!this.props.auth) return <Redirect to="/login" />
         return (
             <div className="contariner">
+
+                <div className="pyro">
+                    <div className="before"></div>
+                    <div className="after"></div>
+                </div>
                 <div id="wrap1">
                     <div className="progress">
                         <div className="progress-bar">{this.state.progress}%</div>
@@ -126,6 +131,8 @@ class Training extends Component {
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
         );
