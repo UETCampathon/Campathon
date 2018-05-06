@@ -24,6 +24,7 @@
 }
 
 .bo {
+    cursor: pointer;
     position: relative;
     width: 90%;
     display: flex;
@@ -38,6 +39,7 @@
 }
 
 .bo:hover{
+    cursor: pointer;
     transform: scale(1.1);
     transition: 0.6s;
     background: lightblue;

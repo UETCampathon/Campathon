@@ -6,7 +6,7 @@ class ListTopic extends React.Component {
             <div className="container">
                 <div className="row">
                     <Topics src={"./images/animal.jpg"} topic={"Animals"}/>
-                    <Topics src={"./images/fruint.jpg"} topic={"Fruits"}/>
+                    <Topics src={"./images/fruitTopic.jpg"} topic={"Fruits"}/>
                     <Topics src={"./images/schoolTool.jpg"} topic={"Tools"}/>
                     <Topics src={"./images/transpot.jpg"} topic={"Transportations"}/>
                 </div>

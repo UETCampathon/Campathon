@@ -13,14 +13,15 @@ class DashBoard extends React.Component{
                               </ol>
                               <div className="carousel-inner" role="listbox">
                                   <div className="carousel-item active">
-                                      <img src="images/fruis.jpg" alt="First slide" className="img-thumbnail" />
-                                  </div>
-                                  <div className="carousel-item">
-                                      <img src="images/body.jpg" alt="First slide" className="img-thumbnail" />
-                                  </div>
-                                  <div className="carousel-item">
                                       <img src="images/learn.bmp" alt="First slide" className="img-thumbnail" />
                                   </div>
+                                  <div className="carousel-item">
+                                      <img src="images/featureHome.jpg" alt="First slide" className="img-thumbnail" />
+                                  </div>
+                                  <div className="carousel-item ">
+                                      <img src="images/body.jpg" alt="First slide" className="img-thumbnail" />
+                                  </div>
+
                               </div>
                               <a className="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                                   <span className="icon-prev" aria-hidden="true" />
