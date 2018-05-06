@@ -7,7 +7,6 @@ import WordLibrary from "./WordLibrary";
 class Library extends React.Component{
 
     render(){
-        console.log(this.props.library)
         const map = this.props.library.map((data) => <WordLibrary word={data.title}/>)
         return(
             <div className="containerLibrary">
