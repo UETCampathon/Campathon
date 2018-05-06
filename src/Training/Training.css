@@ -18,6 +18,7 @@ body{
     height: 100%;
     width: 100%;
     background: #ebebeb;
+    overflow: no-content;
 }
 .contariner{
     width: 70%;
@@ -107,11 +108,12 @@ img {
     background: #FFEB3B;
     left: 0;
     box-sizing: border-box;
-    padding: 35%;
+    padding: 30%;
     transition: 0.5s;
     transform: rotateY(-180deg);
     backface-visibility: hidden;
     border-radius: 5px;
+    font-size: 30px;
 }
 
 .khoi1:active .front{
@@ -139,7 +141,7 @@ body {
     margin: 0;
     padding: 0;
     
-    overflow: hidden;
+
 }
 
 .pyro > .before,

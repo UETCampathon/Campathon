@@ -6,7 +6,7 @@
     background: white;
 }
 
-.containerLibrary .title {
+.containerLibrary .title h4{
     text-align: center;
     font-family: serif;
     font-size: 40px;
@@ -30,18 +30,21 @@
     flex-direction: row;
     margin-left: 5%;
     margin-right: 5%;
-    background: #695f084f;
+    background: white;
     margin-top: 15px;
     border-radius: 9px;
     height: 121px;
     box-shadow: 3px 5px 10px 1px #b5a589;
 }
 
-
+.bo:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+    background: lightblue;
+}
 
 .trai {
     width: 30%;
-    background: #0c0b0b;
     border-radius: 3%;
 }
 

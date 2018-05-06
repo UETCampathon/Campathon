@@ -4,6 +4,17 @@
 .container{
   margin-top: 3%;
 }
+.col-sm-4 {
+  border: solid 1px gray;
+  background: antiquewhite;
+  padding: 3%;
+}
+.col-sm-4 h1{
+  color: orangered;
+}
+.col-sm-4 h3{
+  color: #00c4ff;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -27,4 +38,12 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.card-block{
+  color: white;
+}
+.chuyen{
+  font-size: 18px;
+  width: 98px;
+  color: white;
 }

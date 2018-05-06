@@ -19,7 +19,7 @@ class DashBoard extends React.Component{
                                       <img src="images/body.jpg" alt="First slide" className="img-thumbnail" />
                                   </div>
                                   <div className="carousel-item">
-                                      <img src="images/as.png" alt="First slide" className="img-thumbnail" />
+                                      <img src="images/learn.bmp" alt="First slide" className="img-thumbnail" />
                                   </div>
                               </div>
                               <a className="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -31,7 +31,12 @@ class DashBoard extends React.Component{
                                   <span className="sr-only">Next</span>
                               </a>
                           </div>
-                      </div> 
+                      </div>
+
+                      <div className="col-sm-4">
+                          <h1>English Fun</h1>
+                          <h3>Well come our app, we are the Avengers team. My app helps you lean new words. and explore language.</h3>
+                      </div>
                     
                   </div>
               </div>
