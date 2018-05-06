@@ -8,14 +8,18 @@ import NavBar from "./NavBar";
 import Training from "./Training/Training"
 import listReactFiles from 'list-react-files'
 import Library from "./Library/Library";
-
+import {getList} from "./Service/Services"
 
 class App extends React.Component {
     state = {
         login: false,
+        library: [],
     }
     componentDidMount = () => {
         this.setState({ login: !!(sessionStorage['accessToken']) })
+        getList().then(res => {
+            this.setState({library: res.data})
+        })
     }
     login = () => {
         this.setState({login: true})
@@ -34,7 +38,10 @@ class App extends React.Component {
                         <Route exact path='/login' component={() => <Login auth={this.state.login} login={this.login}/>} />
                         <Route exact path='/register' component={() => <Register auth={this.state.login} />} />
                         <Route exact path='/training/:id' component={() => <Training auth={this.state.login} />} />
-                        <Route exact path='/library' component={() => <Library auth={this.state.login} />} />
+                        <Route exact path='/library' component={() => 
+                        <Library auth={this.state.login} 
+                        library={this.state.library}/>} 
+                        />
                     </Switch>
                 </div>
             </BrowserRouter>

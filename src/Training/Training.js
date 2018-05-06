@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Training.css';
-import {Link} from 'react-router-dom';
-import {Redirect} from "react-router-dom"
+import { Link } from 'react-router-dom';
+import { Redirect } from "react-router-dom"
 import Image from "./Image"
-import {addToLibrary} from "../Service/Services"
+import { addToLibrary, getList } from "../Service/Services"
 const Animals = ["Dog", "Fish", "Lions", "Rabbit", "Snake"];
 const Fruits = ["Apples", "Bananas", "Grapes", "Lemons", "Orange"];
 const Tools = ["Books", "Eraser", "Pencils", "Ruler", "Scissors"];
@@ -45,7 +45,7 @@ class Training extends Component {
                 }
             }
             res = arr.map(index => {
-                return {img: "images/Animals/" + Animals[index] + ".png"}
+                return { img: "images/Animals/" + Animals[index] + ".png" }
             })
         }
         else if (topic === "Fruits") {
@@ -59,7 +59,7 @@ class Training extends Component {
                 }
             }
             res = arr.map(index => {
-                return {img: "images/Fruits/" + Fruits[index] + ".png"}
+                return { img: "images/Fruits/" + Fruits[index] + ".png" }
             })
         }
 
@@ -74,7 +74,7 @@ class Training extends Component {
                 }
             }
             res = arr.map(index => {
-                return {img: "images/Tools/" + Tools[index] + ".png"}
+                return { img: "images/Tools/" + Tools[index] + ".png" }
             })
         }
 
@@ -89,23 +89,25 @@ class Training extends Component {
                 }
             }
             res = arr.map(index => {
-                return {img: "images/Transportations/" + Transportations[index] + ".png"}
+                return { img: "images/Transportations/" + Transportations[index] + ".png" }
             })
         }
         return res;
     }
-    choose = (picked,answer) => {
-        if(picked === this.getName(answer.img)) 
-        {
-            addToLibrary(picked).then(res=>this.setState({progress: this.state.progress+20}) );
+    choose = (picked, answer) => {
+        if (picked === this.getName(answer.img)) {
+            getList().then(res => {
+                const data = res.data.map((obj) => obj.title);
+                if(data.indexOf(picked)===-1)addToLibrary(picked)
+                this.setState({ progress: this.state.progress + 20 });
+            })
         }
     }
     render() {
 
         const obj = this.randomImg(window.location.pathname.slice(10));
         const answer = obj[Math.floor(Math.random() * 4)];
-        console.log(answer)
-        if (!this.props.auth) return <Redirect to="/login"/>
+        if (!this.props.auth) return <Redirect to="/login" />
         return (
             <div className="contariner">
                 <div id="wrap1">
@@ -113,10 +115,10 @@ class Training extends Component {
                         <div className="progress-bar">{this.state.progress}%</div>
                     </div>
                     <div className="row">
-                        <Image src={obj[0].img} name={this.getName(obj[0].img)} choose={this.choose} answer={answer}/>
-                        <Image src={obj[1].img} name={this.getName(obj[1].img)} choose={this.choose} answer={answer}/>
-                        <Image src={obj[2].img} name={this.getName(obj[2].img)} choose={this.choose} answer={answer}/>
-                        <Image src={obj[3].img} name={this.getName(obj[3].img)} choose={this.choose} answer={answer}/>
+                        <Image src={obj[0].img} name={this.getName(obj[0].img)} choose={this.choose} answer={answer} />
+                        <Image src={obj[1].img} name={this.getName(obj[1].img)} choose={this.choose} answer={answer} />
+                        <Image src={obj[2].img} name={this.getName(obj[2].img)} choose={this.choose} answer={answer} />
+                        <Image src={obj[3].img} name={this.getName(obj[3].img)} choose={this.choose} answer={answer} />
                     </div>
                     <div className="row3">
                         <div className="col-sm-6 push-sm-3">

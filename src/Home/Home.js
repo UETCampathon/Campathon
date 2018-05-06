@@ -6,7 +6,6 @@ import ListTopic from './ListTopic';
 
 class Home extends Component {
     render() {
-        console.log("Home",this.props.auth)
         if (!this.props.auth) {
             return <Redirect to="/login" />
         }

@@ -37,7 +37,7 @@ export const login = ({email,password}) => {
 }
 
 export const getList = () => {
-    const token=sessionStorage['token']
+    const token=sessionStorage['accessToken']
    
     return fetch("https://uetcc-todo-app.herokuapp.com/todos?token=" + token)
     .then((response) => {
@@ -46,7 +46,7 @@ export const getList = () => {
     })
 }
 export const addToLibrary = (text) => {
-    const token=sessionStorage['token']
+    const token=sessionStorage['accessToken']
     const url = 'https://uetcc-todo-app.herokuapp.com/todos';
     const request = new Request(url,{
         headers:{

@@ -3,13 +3,17 @@ import "./Library.css"
 import WordLibrary from "./WordLibrary";
 
 
+
 class Library extends React.Component{
+
     render(){
+        console.log(this.props.library)
+        const map = this.props.library.map((data) => <WordLibrary word={data.title}/>)
         return(
             <div className="containerLibrary">
-                <div className="title"><h4>Your english library</h4></div>
+                <div className="title"><h4>Your Library</h4></div>
                 <div className="wrapLibrary">
-                    <WordLibrary />
+                   {map}
                 </div>
             </div>
 
