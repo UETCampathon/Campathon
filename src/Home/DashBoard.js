@@ -36,7 +36,7 @@ class DashBoard extends React.Component{
 
                       <div className="col-sm-4">
                           <h1>English Fun</h1>
-                          <h3>Well come our app, we are the Avengers team. My app helps you lean new words. and explore language.</h3>
+                          <h3>Well come to our app, we are the Avengers team. Ours app help you learn new words and explore English.</h3>
                       </div>
                     
                   </div>
